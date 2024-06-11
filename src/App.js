@@ -3,6 +3,8 @@ import {Liste,Values} from './components/Liste';
 import Somme from './components/Somme';
 import Compteur from './components/Compteur';
 import { useState } from 'react';
+import Form from './components/Form';
+import NameForm from './components/NameForm';
 
 export default function App() {
   const produits = [
@@ -27,9 +29,11 @@ export default function App() {
       <button className='btn btn-accent' onClick={()=> setIsClicked(!isClicked)}>Show Compteur</button>
       {isClicked && <Compteur/>}
       <button className='btn btn-accent' onClick={ShowStuff}>Produits</button>
+      <NameForm/>
       <ul>
         {content}
       </ul>
+      {/* <Form/> */}
       {/* <button onClick={()=> setNom('Brajan')}>Click</button><br></br> */}
       {/* <button className='bg-[#cccccc]' onClick={compteur}>UseEffect()</button> */}
       {/* <Liste ListI={ids} ListName={names} ListPrice={prixs}/>
